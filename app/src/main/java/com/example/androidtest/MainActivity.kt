@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -96,5 +96,17 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         Toast.makeText(applicationContext, "onDestroy", Toast.LENGTH_SHORT).show()
         Log.i("MyLog", "onDestroy")
+    }
+
+    // Navigation menu
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    fun resetCounter(item: android.view.MenuItem) {
+        counter = 0
+        findViewById<TextView>(R.id.textView).text = counter.toString()
     }
 }

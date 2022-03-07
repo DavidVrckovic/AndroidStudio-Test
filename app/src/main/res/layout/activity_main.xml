@@ -7,36 +7,42 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:gravity="center"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/running_abstract"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="0" />
+            android:layout_height="wrap_content"
+            android:background="?colorSecondary"
+            android:text="@string/textView"
+            android:textColor="?colorOnSecondary" />
+
         <Button
             android:id="@+id/buttonUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="countUp"
-            android:text="UP" />
+            android:text="@string/buttonUp" />
+
         <Button
             android:id="@+id/buttonDown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="countDown"
-            android:text="DOWN" />
+            android:text="@string/buttonDown" />
 
         <EditText
             android:id="@+id/inputName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your name">
-        </EditText>
+            android:background="?colorSecondary"
+            android:hint="@string/inputName"
+            android:textColor="?colorOnSecondary" />
 
     </LinearLayout>
 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fit Runner</string>
+    <string name="buttonUp">GORE</string>
+    <string name="buttonDown">DOLJE</string>
+    <string name="inputName">Upišite svoje ime</string>
+    <string name="buttonHome">POČETNA</string>
+    <string name="buttonSendMsg">POŠALJI SMS</string>
+    <string name="resetCounter">Resetiraj</string>
+    <string name="croatian">Hrvatski</string>
+    <string name="english">Engleski</string>
+</resources>

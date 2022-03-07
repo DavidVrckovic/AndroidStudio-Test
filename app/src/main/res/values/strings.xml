@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Android Test</string>
+    <string name="app_name">Fit Runner</string>
+    <string name="buttonUp">UP</string>
+    <string name="textView" translatable="false">0</string>
+    <string name="buttonDown">DOWN</string>
+    <string name="inputName">Enter your name</string>
+    <string name="buttonHome">HOME</string>
+    <string name="buttonSendMsg">SEND SMS</string>
+    <string name="resetCounter">Reset</string>
+    <string name="croatian">Croatian</string>
+    <string name="english">English</string>
 </resources>

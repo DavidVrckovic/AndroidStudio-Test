@@ -5,7 +5,6 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
 import android.widget.TextView
 
 class SuccessActivity : AppCompatActivity() {
@@ -15,7 +14,10 @@ class SuccessActivity : AppCompatActivity() {
 
         val username = intent.getStringExtra("username")
         findViewById<TextView>(R.id.textView).text =
-            "$username you have successfully reached 10 steps."
+            "$username you have successfully reached 10 steps." // getString(R.string.inputName, username)
+
+        // Hide menu_main
+        supportActionBar?.hide()
     }
 
     fun backToHomeScreen(view: View) {
@@ -25,14 +27,15 @@ class SuccessActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    override fun onBackPressed() {}
+    // Disable the Back button from calling the onDestroy() function so that the user can return to the same instance of that activity
+    override fun onBackPressed() {
+        moveTaskToBack(true)
+    }
 
-    fun sendMsg(view: android.view.View) {
-        /*val Intent = Intent(Intent.ACTION_SENDTO, Uri.fromParts("sms", "0921854645", findViewById<TextView>(R.id.textView).text.toString()))
-        startActivity(Intent)*/
+    fun sendMsg(view: View) {
         val uri = Uri.parse("smsto:+385917973174")
-        val Intent = Intent(Intent.ACTION_SENDTO, uri)
-        Intent.putExtra("sms_body", findViewById<TextView>(R.id.textView).text.toString())
-        startActivity(Intent)
+        val intent = Intent(Intent.ACTION_SENDTO, uri)
+        intent.putExtra("sms_body", findViewById<TextView>(R.id.textView).text.toString())
+        startActivity(intent)
     }
 }

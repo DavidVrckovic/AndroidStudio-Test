@@ -7,29 +7,34 @@
     tools:context=".SuccessActivity">
 
     <LinearLayout
-        android:gravity="center"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/running_abstract"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="" />
+            android:layout_height="wrap_content"
+            android:background="?colorSecondary"
+            android:text=""
+            android:textColor="?colorOnSecondary" />
+
         <Button
             android:id="@+id/buttonHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="backToHomeScreen"
-            android:text="HOME" />
+            android:text="@string/buttonHome" />
+
         <Button
             android:id="@+id/buttonSendMsg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="sendMsg"
-            android:text="SEND SMS" />
+            android:text="@string/buttonSendMsg" />
 
     </LinearLayout>
 

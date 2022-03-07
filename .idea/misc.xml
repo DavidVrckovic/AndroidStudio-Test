@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/Android Studio/AndroidStudio-Test/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3828125" />
+        <entry key="..\:/Projects/Android Studio/AndroidStudio-Test/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/Android Studio/AndroidStudio-Test/app/src/main/res/layout/activity_success.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projects/Android Studio/AndroidStudio-Test/app/src/main/res/menu/restore_counter.xml" value="0.36666666666666664" />
         <entry key="..\:/Projects/Android Studio/AndroidTest/app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
         <entry key="..\:/Projects/Android Studio/AndroidTest/app/src/main/res/layout/activity_success.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/David/AndroidStudioProjects/AndroidTest/app/src/main/res/layout/activity_main.xml" value="0.1" />
