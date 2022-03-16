@@ -1,14 +1,19 @@
 package com.example.androidtest
 
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.ContextMenu
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import java.util.*
 
 var counter = 0
 
@@ -31,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         val pref = getPreferences(MODE_PRIVATE)
         counter = pref.getInt("counter", 0)
         findViewById<TextView>(R.id.textView).text = counter.toString()
+
+        registerForContextMenu(findViewById<TextView>(R.id.textView))
     }
 
     fun countUp(view: View) {
@@ -105,8 +112,51 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
+    // Reset counter (through navigation menu)
     fun resetCounter(item: android.view.MenuItem) {
         counter = 0
         findViewById<TextView>(R.id.textView).text = counter.toString()
     }
+
+    // Language change (through navigation menu)
+    @Suppress("DEPRECATION")
+    fun changeLanguage(context: Context, language: String) {
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        val res = context.resources
+        val config = Configuration(res.configuration)
+        config.setLocale(locale)
+        context.createConfigurationContext(config)
+        res.updateConfiguration(config, res.displayMetrics)
+    }
+
+    // Language change (through navigation menu)
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.restore_counter -> {
+                counter = 0
+                findViewById<TextView>(R.id.textView).text = counter.toString()
+                true
+            }
+            R.id.croatian -> {
+                changeLanguage(this, "hr")
+                recreate()
+                true
+            }
+            R.id.english -> {
+                changeLanguage(this, "en")
+                recreate()
+                true
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    /*
+    override fun onCreateContextMenu(menu: ContextMenu, v: View,
+                                     menuInfo: ContextMenu.ContextMenuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        val inflater = menuInflater
+        inflater.inflate(R.menu.context_menu, menu)
+    }*/
 }
