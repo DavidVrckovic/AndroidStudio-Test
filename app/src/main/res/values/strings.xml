@@ -9,4 +9,5 @@
     <string name="resetCounter">Reset</string>
     <string name="croatian">Croatian</string>
     <string name="english">English</string>
+    <string name="resetCounterContextMenu">Reset</string>
 </resources>

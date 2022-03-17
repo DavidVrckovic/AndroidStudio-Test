@@ -152,11 +152,13 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    /*
-    override fun onCreateContextMenu(menu: ContextMenu, v: View,
-                                     menuInfo: ContextMenu.ContextMenuInfo) {
+    // Context menu (appearing when clicking and holding on the counter TextView)
+    override fun onCreateContextMenu(
+        menu: ContextMenu?, v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
         super.onCreateContextMenu(menu, v, menuInfo)
         val inflater = menuInflater
         inflater.inflate(R.menu.context_menu, menu)
-    }*/
+    }
 }
