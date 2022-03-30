@@ -36,6 +36,13 @@
             android:onClick="sendMsg"
             android:text="@string/buttonSendMsg" />
 
+        <Button
+            android:id="@+id/buttonSaveToDB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="addUsers"
+            android:text="@string/buttonSaveToDB" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

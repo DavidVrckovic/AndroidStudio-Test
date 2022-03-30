@@ -10,4 +10,5 @@
     <string name="croatian">Croatian</string>
     <string name="english">English</string>
     <string name="resetCounterContextMenu">Reset</string>
+    <string name="buttonSaveToDB">Save</string>
 </resources>
